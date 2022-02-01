@@ -1,0 +1,26 @@
+{
+  "name": "auguste-notify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ghivert/auguste-notify.git",
+  "author": "Guillaume Hivert <hivert.is.coming@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node build/main.js",
+    "dev": "yarn build && nodemon build/main.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@frenchpastries/arrange": "^1.0.0",
+    "@frenchpastries/assemble": "^0.7.0",
+    "@frenchpastries/millefeuille": "^1.0.2",
+    "dotenv": "^15.0.0",
+    "ws": "^8.4.2"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.2.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}

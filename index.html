@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const exampleSocket = new WebSocket("ws://localhost:3458/ghivert/socket");
+      console.log(exampleSocket)
+      setTimeout(() => {
+        exampleSocket.send('Meh eh')
+      }, 2000)
+    </script>
+  </body>
+</html>

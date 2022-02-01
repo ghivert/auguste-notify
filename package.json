@@ -1,0 +1,23 @@
+{
+  "name": "auguste-notify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ghivert/auguste-notify.git",
+  "author": "Guillaume Hivert <hivert.is.coming@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "postinstall": "node scripts/install.mjs",
+    "upgrade-all": "node scripts/upgrade.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.14",
+    "chalk": "^5.0.0",
+    "concurrently": "^7.0.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@gimme-my-money/authentication": "^0.1.2"
+  }
+}

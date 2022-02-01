@@ -1,0 +1,1 @@
+# Dockerized postgres minimal config

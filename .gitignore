@@ -1,0 +1,9 @@
+node_modules/
+build/
+
+*~
+Thumbs.db
+.DS_Store
+.env
+
+/services/auth/keys

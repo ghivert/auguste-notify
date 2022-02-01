@@ -1,0 +1,44 @@
+version: '3'
+services:
+  db:
+    build: ../databases
+    restart: always
+    env_file:
+      - 'databases.env'
+    networks:
+      - g2m-bakery
+  authentication:
+    build: ../auth
+    restart: always
+    env_file:
+      - 'envs/auth.env'
+    depends_on:
+      - 'bakery'
+      - 'db'
+    networks:
+      - g2m-bakery
+  bakery:
+    build: ../bakery
+    restart: always
+    ports:
+      - '10000:10000'
+    expose:
+      - '10000'
+    env_file:
+      - 'envs/bakery.env'
+    networks:
+      - g2m-bakery
+  gateway:
+    build: ../gateway
+    restart: always
+    ports:
+      - '8888:8888'
+    expose:
+      - '8888'
+    env_file:
+      - 'envs/gateway.env'
+    networks:
+      - g2m-bakery
+networks:
+  g2m-bakery:
+    driver: bridge
